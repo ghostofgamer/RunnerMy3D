@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class PauseScreen : MonoBehaviour
 {
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _playButton;
+    [SerializeField] private Button _menuButton;
     [SerializeField] private Score _score;
 
     private CanvasGroup _pauseGroup;
@@ -16,12 +18,14 @@ public class PauseScreen : MonoBehaviour
     {
         _pauseButton.onClick.AddListener(OnPauseButtonClick);
         _playButton.onClick.AddListener(OnPlayButtonClick);
+        _menuButton.onClick.AddListener(OnMenuButtonClick);
     }
 
     private void OnDisable()
     {
         _pauseButton.onClick.RemoveListener(OnPauseButtonClick);
         _playButton.onClick.RemoveListener(OnPlayButtonClick);
+        _menuButton.onClick.RemoveListener(OnMenuButtonClick);
     }
 
     private void Start()
@@ -30,15 +34,17 @@ public class PauseScreen : MonoBehaviour
         _pauseGroup.alpha = 0;
         _pauseGroup.blocksRaycasts = false;
         _playButton.interactable = false;
+        _menuButton.interactable = false;
     }
 
     private void OnPauseButtonClick()
     {
+        Time.timeScale = 0;
         _score.ChangePlaying(false);
         _pauseGroup.alpha = 1;
         _pauseGroup.blocksRaycasts = true;
         _playButton.interactable = true;
-        Time.timeScale = 0;
+        _menuButton.interactable = true;
     }
 
     private void OnPlayButtonClick()
@@ -47,5 +53,10 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1;
         _pauseGroup.blocksRaycasts = false;
         _score.ChangePlaying(true);
+    }
+
+    private void OnMenuButtonClick()
+    {
+        SceneManager.LoadScene(0);
     }
 }

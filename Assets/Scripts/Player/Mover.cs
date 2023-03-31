@@ -107,12 +107,18 @@ public class Mover : MonoBehaviour
 
     private void OnJump()
     {
+        //if (_groundChecker._isGrounded)
+        //{
+        //    _animations.SetJumpTrigger();
+        //    _velocity = _jumpForce;
+        //    _effect.SetActive(false);
+        //}
+
         if (_groundChecker._isGrounded)
         {
-            _animations.SetJumpTrigger();
+            _animations.SetJumpingsTrigger();
             _velocity = _jumpForce;
             _effect.SetActive(false);
-            //_effect.EffectOption(false);
         }
     }
 
