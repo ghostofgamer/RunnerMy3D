@@ -227,7 +227,7 @@ RectTransform:
   - {fileID: 664555803}
   - {fileID: 647490293}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -279,7 +279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &136061303
 Rigidbody:
@@ -734,73 +734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345280998}
   m_CullTransparentMesh: 1
---- !u!1 &359090836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 359090837}
-  - component: {fileID: 359090838}
-  m_Layer: 0
-  m_Name: PointsPalms
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &359090837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359090836}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.65, y: 1.07, z: 13.66}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &359090838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359090836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1001 &377686171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2790,73 +2723,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406635901}
   m_CullTransparentMesh: 1
---- !u!1 &410487765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 410487766}
-  - component: {fileID: 410487767}
-  m_Layer: 0
-  m_Name: PointsWater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &410487766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410487765}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.59, y: -0.5, z: 56.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &410487767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410487765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &442293587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2789,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461453432
 GameObject:
@@ -3182,73 +3048,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470645146}
   m_CullTransparentMesh: 1
---- !u!1 &501260046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 501260047}
-  - component: {fileID: 501260048}
-  m_Layer: 0
-  m_Name: Points1Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &501260047
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501260046}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &501260048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501260046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &512953035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,140 +3201,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514312247}
   m_CullTransparentMesh: 1
---- !u!1 &521643471
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 521643473}
-  - component: {fileID: 521643472}
-  m_Layer: 0
-  m_Name: Points3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!114 &521643472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521643471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
---- !u!4 &521643473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521643471}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &550943417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 550943418}
-  - component: {fileID: 550943419}
-  m_Layer: 0
-  m_Name: PointsHouse
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &550943418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550943417}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.75, y: 1.08, z: 49.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &550943419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550943417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &602679225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,140 +4687,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835121224}
   m_CullTransparentMesh: 1
---- !u!1 &899289719
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 899289720}
-  - component: {fileID: 899289721}
-  m_Layer: 0
-  m_Name: Points3Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &899289720
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899289719}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: -0.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899289721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899289719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
---- !u!1 &937441170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937441171}
-  - component: {fileID: 937441172}
-  m_Layer: 0
-  m_Name: PointsCharacters
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &937441171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937441170}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.71, y: 0.986, z: 13.659994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &937441172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937441170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5383,102 +4914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1763812594}
   _zOffset: 5
---- !u!1 &969921309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 969921311}
-  - component: {fileID: 969921310}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 0
---- !u!114 &969921310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969921309}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 1115463698}
-  _capacity: 16
-  _speedTimer: {fileID: 1554368489}
-  _enemyPrefab:
-  - {fileID: 98178603826590916, guid: fa690b49aebc6df4596225e06ffba202, type: 3}
-  _housePrefab:
-  - {fileID: 2301818542014279022, guid: 439011bf6f6a8ba4297be08a9199ba09, type: 3}
-  - {fileID: 1655966165744570475, guid: 1bb6ddacd513dac40a0935c4aa9722bd, type: 3}
-  - {fileID: 2118371560566114088, guid: ab1e32121d463f64f9f60e68609ef413, type: 3}
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 5818321957795002135, guid: 727f8ab24a0c3194ba281438119e6398, type: 3}
-  _pier: {fileID: 7047966032324996004, guid: e85b817511ff1044f888104b3d7cdc52, type: 3}
-  _secondsBetweenSpawn: 1
-  _secondsBetweenSpawnInWater: 6
-  _secondsBetweenSpawnPier: 10
-  _secondsBetweenSpawnHouse: 3
-  _spawnPoints:
-  - {fileID: 1645974032}
-  - {fileID: 1391383673}
-  - {fileID: 521643473}
-  _spawnPointsCoin:
-  - {fileID: 501260047}
-  - {fileID: 1187235894}
-  - {fileID: 899289720}
-  _spawnPointsHouse:
-  - {fileID: 550943418}
-  _spawnPointsWater:
-  - {fileID: 410487766}
-  - {fileID: 1422662537}
-  - {fileID: 1955492075}
-  _spawnPointsCharacters:
-  - {fileID: 937441171}
-  - {fileID: 2110252725}
-  - {fileID: 994238167}
-  _spawnPointsPalms:
-  - {fileID: 359090837}
---- !u!4 &969921311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969921309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 70.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1645974032}
-  - {fileID: 1391383673}
-  - {fileID: 521643473}
-  - {fileID: 501260047}
-  - {fileID: 1187235894}
-  - {fileID: 899289720}
-  - {fileID: 359090837}
-  - {fileID: 410487766}
-  - {fileID: 937441171}
-  - {fileID: 550943418}
-  - {fileID: 1422662537}
-  - {fileID: 1955492075}
-  - {fileID: 2110252725}
-  - {fileID: 994238167}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992131235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,73 +5037,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992131235}
   m_CullTransparentMesh: 1
---- !u!1 &994238166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 994238167}
-  - component: {fileID: 994238168}
-  m_Layer: 0
-  m_Name: PointsCharacters (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &994238167
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994238166}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.15, y: 0.986, z: 13.659994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &994238168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994238166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &1043191367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,10 +5089,23 @@ MonoBehaviour:
     _amount: 3
   - _prefab: {fileID: 3498767514849620934, guid: 8e9016aad6027d94292ce65cb84b27b5, type: 3}
     _amount: 3
+  - _prefab: {fileID: 9178475575185956507, guid: 6d69475aea5441848886aa0453cc9ddc, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 4522784520464694643, guid: 32fa214e39095d84f8a9ceec96e5be02, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 3134460408229422630, guid: 5d47965947a85e04ca02445f859db313, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 2288464468046825846, guid: e937eb94f2bac304b8aff53b3b899dff, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 3638031268596569908, guid: fb5d0b259d0f9254685ba76fa969bf3e, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 4189769846932606427, guid: 97c01db363f9a1448994e7a4d83a04ff, type: 3}
+    _amount: 3
   _pooledItem: []
   _playerTransform: {fileID: 3233603921475114163}
   _zSpawn: 0
   _tileLength: 50
+  _timeHardTemplate: 51
 --- !u!4 &1043191369
 Transform:
   m_ObjectHideFlags: 0
@@ -5738,7 +5119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059546417
 GameObject:
@@ -10663,7 +10044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122036777
 GameObject:
@@ -11074,73 +10455,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169822667}
   m_CullTransparentMesh: 1
---- !u!1 &1187235893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1187235894}
-  - component: {fileID: 1187235895}
-  m_Layer: 0
-  m_Name: Points2Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &1187235894
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187235893}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187235895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187235893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &1224509422
 GameObject:
   m_ObjectHideFlags: 0
@@ -11416,73 +10730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299538366}
   m_CullTransparentMesh: 1
---- !u!1 &1391383671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1391383673}
-  - component: {fileID: 1391383672}
-  m_Layer: 0
-  m_Name: Points2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!114 &1391383672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391383671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
---- !u!4 &1391383673
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391383671}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398209539
 GameObject:
   m_ObjectHideFlags: 0
@@ -11618,73 +10865,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398209539}
   m_CullTransparentMesh: 1
---- !u!1 &1422662536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1422662537}
-  - component: {fileID: 1422662538}
-  m_Layer: 0
-  m_Name: PointsWater (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &1422662537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422662536}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.8, y: -0.5, z: 212.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1422662538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422662536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &1458448777
 GameObject:
   m_ObjectHideFlags: 0
@@ -12003,7 +11183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1554368489
 MonoBehaviour:
@@ -12447,73 +11627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621236996}
   m_CullTransparentMesh: 1
---- !u!1 &1645974030
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1645974032}
-  - component: {fileID: 1645974031}
-  m_Layer: 0
-  m_Name: Points1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!114 &1645974031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645974030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
---- !u!4 &1645974032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645974030}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680794701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13830,73 +12943,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935978009}
   m_CullTransparentMesh: 1
---- !u!1 &1955492074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1955492075}
-  - component: {fileID: 1955492076}
-  m_Layer: 0
-  m_Name: PointsWater (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &1955492075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955492074}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -107.8, y: -0.5, z: 212.29999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1955492076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955492074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &1958585839
 GameObject:
   m_ObjectHideFlags: 0
@@ -19096,73 +18142,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089585641}
   m_CullTransparentMesh: 1
---- !u!1 &2110252724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2110252725}
-  - component: {fileID: 2110252726}
-  m_Layer: 0
-  m_Name: PointsCharacters (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4
-  m_IsActive: 1
---- !u!4 &2110252725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110252724}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.41, y: 0.986, z: 13.659994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 969921311}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2110252726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110252724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63bf0b8d940489f46ba18eaa67694d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _capacity: 0
-  _speedTimer: {fileID: 0}
-  _enemyPrefab: []
-  _housePrefab: []
-  _yachtPrefab: []
-  _charactersPrefab: []
-  _palmsPrefab: []
-  _coin: {fileID: 0}
-  _pier: {fileID: 0}
-  _secondsBetweenSpawn: 3
-  _secondsBetweenSpawnInWater: 0
-  _secondsBetweenSpawnPier: 0
-  _secondsBetweenSpawnHouse: 0
-  _spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnPointsCoin: []
-  _spawnPointsHouse: []
-  _spawnPointsWater: []
-  _spawnPointsCharacters: []
-  _spawnPointsPalms: []
 --- !u!1 &2110916755
 GameObject:
   m_ObjectHideFlags: 0

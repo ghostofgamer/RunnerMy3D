@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - GroundZero
+  - GroundEasy
+  - GroundMedium
   layers:
   - Default
   - TransparentFX

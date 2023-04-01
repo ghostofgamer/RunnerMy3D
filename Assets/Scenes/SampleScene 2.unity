@@ -6016,10 +6016,23 @@ MonoBehaviour:
     _amount: 3
   - _prefab: {fileID: 2340020653072875987, guid: 6c720330d017aef4882543dd0b5b11e9, type: 3}
     _amount: 3
+  - _prefab: {fileID: 93546750121064396, guid: dafd11c800a9f6d44a6455b5d3d7f2b5, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 7796228344852701185, guid: 971fa1f650f9a3047947fdfc10010596, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 3890777784965286638, guid: 900c5c64942a9124e99c965095ec625a, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 8859788698423741133, guid: 257994442af491141a3d33975ec4e952, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 5968821110333469929, guid: 34d3866e3b877ce4b9a703eda5fd8cc6, type: 3}
+    _amount: 3
+  - _prefab: {fileID: 596118112833277277, guid: d7a0c49de2ddb93459ac2a067454ead8, type: 3}
+    _amount: 3
   _pooledItem: []
   _playerTransform: {fileID: 3233603921475114163}
   _zSpawn: 0
   _tileLength: 50
+  _timeHardTemplate: 51
 --- !u!4 &1043191369
 Transform:
   m_ObjectHideFlags: 0

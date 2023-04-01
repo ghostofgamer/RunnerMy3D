@@ -42,14 +42,6 @@ public class GameScreenMenu : MonoBehaviour
         _score.ChangePlaying(false);
     }
 
-    private void OnPlayButtonClick()
-    {
-        InteractableButton(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(1);
-        _score.ChangePlaying(true);
-    }
-
     private void OnSettingsButtonClick()
     {
         _settingsScreen.OpenSettingsScreen();

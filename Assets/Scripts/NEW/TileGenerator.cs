@@ -7,7 +7,9 @@ public class TileGenerator : Pool
     [SerializeField] private Transform _playerTransform;
     [SerializeField] private float _zSpawn = 0;
     [SerializeField] private float _tileLength = 50;
+    [SerializeField] private float _timeHardTemplate;
 
+    private float _elapsedTime = 0;
     private int _numberTile = 5;
 
     private void Start()
@@ -18,20 +20,27 @@ public class TileGenerator : Pool
         {
             if (i == 0)
             {
-                Spawn("GroundZero"); 
+                Spawn("GroundZero");
             }
             else
             {
-                Spawn("Ground");
+                Spawn("GroundEasy");
             }
         }
     }
 
     private void Update()
     {
+        _elapsedTime += Time.deltaTime;
+
         if (_playerTransform.position.z - 50f > _zSpawn - (_numberTile * _tileLength))
         {
-            Spawn("Ground");
+            if (_elapsedTime < _timeHardTemplate)
+            {
+                Spawn("GroundMedium");
+            }
+            else
+                Spawn("Ground");
         }
 
         DeactivatedTile();
@@ -49,7 +58,7 @@ public class TileGenerator : Pool
             }
             tile.transform.position = this.transform.forward * _zSpawn;
             tile.SetActive(true);
-            
+
         }
         _zSpawn += _tileLength;
     }
@@ -58,9 +67,8 @@ public class TileGenerator : Pool
     {
         foreach (var item in _pooledItem)
         {
-            if (item.transform.position.z+50 < _playerTransform.position.z)
+            if (item.transform.position.z + 50 < _playerTransform.position.z)
             {
-                Debug.Log("выключить");
                 item.SetActive(false);
             }
         }
