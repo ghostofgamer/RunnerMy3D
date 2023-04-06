@@ -7,9 +7,14 @@ public class PlayerCollisionHandler : MonoBehaviour
 {
     private Player _player;
 
+    //private void Awake()
+    //{
+    //}
+
     private void Start()
     {
-        _player = GetComponent<Player>();
+        _player= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //_player = GetComponent<Player>();
     }
 
     private void OnTriggerEnter(Collider other)

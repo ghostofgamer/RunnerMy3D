@@ -12,10 +12,15 @@ public class TileGenerator : Pool
     private float _elapsedTime = 0;
     private int _numberTile = 5;
 
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
+        _playerTransform= GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         InitializeTile();
-
+        
         for (int i = 0; i < _numberTile; i++)
         {
             if (i == 0)

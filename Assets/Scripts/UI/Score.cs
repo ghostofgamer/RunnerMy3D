@@ -12,17 +12,9 @@ public class Score : MonoBehaviour
     private bool _isPlaying = true;
     private float _elapsedTime = 0f;
 
-    private void Update()
+    private void Awake()
     {
-        if (_isPlaying)
-        {
-            _elapsedTime += Time.deltaTime;
-
-            if (_elapsedTime >= _lastTimeAddedScore)
-            {
-                _player.IncreaseScore();
-            }
-        }
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void OnEnable()
@@ -34,6 +26,22 @@ public class Score : MonoBehaviour
     {
         _player.ScoreChanged -= OnScoreChanged;
     }
+
+    private void Update()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if (_isPlaying)
+        {
+            _elapsedTime += Time.deltaTime;
+
+            if (_elapsedTime >= _lastTimeAddedScore)
+            {
+                _player.IncreaseScore();
+            }
+        }
+    }
+
 
     private void OnScoreChanged(int score)
     {

@@ -10,7 +10,16 @@ public class Player : MonoBehaviour
 
     public event UnityAction<int> ScoreChanged; 
     public event UnityAction<int> CoinsScoreChanged; 
-    public event UnityAction Died; 
+    public event UnityAction Died;
+
+    public int Coin => _coin;
+
+
+    private void Start()
+    {
+        ResetPlayer();
+        PlayerPrefs.SetInt("coin", _coin);
+    }
     public void Die()
     {
         Died?.Invoke();
@@ -26,6 +35,7 @@ public class Player : MonoBehaviour
     {
         _coin++;
         CoinsScoreChanged?.Invoke(_coin);
+        PlayerPrefs.SetInt("coin", _coin);
     }
 
     public void ResetPlayer()

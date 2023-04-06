@@ -10,7 +10,9 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _playButton;
     [SerializeField] private Button _menuButton;
+    [SerializeField] private Button _returnMenuButton;
     [SerializeField] private Score _score;
+    [SerializeField] private GameScreenMenu _gameScreenMenu;
 
     private CanvasGroup _pauseGroup;
 
@@ -19,6 +21,7 @@ public class PauseScreen : MonoBehaviour
         _pauseButton.onClick.AddListener(OnPauseButtonClick);
         _playButton.onClick.AddListener(OnPlayButtonClick);
         _menuButton.onClick.AddListener(OnMenuButtonClick);
+        _returnMenuButton.onClick.AddListener(OnReturnMenuButtonClick);
     }
 
     private void OnDisable()
@@ -26,6 +29,7 @@ public class PauseScreen : MonoBehaviour
         _pauseButton.onClick.RemoveListener(OnPauseButtonClick);
         _playButton.onClick.RemoveListener(OnPlayButtonClick);
         _menuButton.onClick.RemoveListener(OnMenuButtonClick);
+        _returnMenuButton.onClick.RemoveListener(OnReturnMenuButtonClick);
     }
 
     private void Start()
@@ -33,8 +37,7 @@ public class PauseScreen : MonoBehaviour
         _pauseGroup = GetComponent<CanvasGroup>();
         _pauseGroup.alpha = 0;
         _pauseGroup.blocksRaycasts = false;
-        _playButton.interactable = false;
-        _menuButton.interactable = false;
+        InteractableButton(false);
     }
 
     private void OnPauseButtonClick()
@@ -43,8 +46,7 @@ public class PauseScreen : MonoBehaviour
         _score.ChangePlaying(false);
         _pauseGroup.alpha = 1;
         _pauseGroup.blocksRaycasts = true;
-        _playButton.interactable = true;
-        _menuButton.interactable = true;
+        InteractableButton(true);
     }
 
     private void OnPlayButtonClick()
@@ -58,5 +60,17 @@ public class PauseScreen : MonoBehaviour
     private void OnMenuButtonClick()
     {
         SceneManager.LoadScene(0);
+    }
+
+    private void InteractableButton(bool flag)
+    {
+        _playButton.interactable = flag;
+        _menuButton.interactable = flag;
+    }
+    private void OnReturnMenuButtonClick()
+    {
+        _pauseGroup.alpha = 0;
+        _pauseGroup.blocksRaycasts = false;
+        _gameScreenMenu.OpenScreen();
     }
 }

@@ -7,20 +7,18 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CanvasGroup))]
 public class GameOverScreen : MonoBehaviour
 {
-
     [SerializeField] private Button _menuButton;
     [SerializeField] private Button _level1Button;
     [SerializeField] private Button _level2Button;
     [SerializeField] private Button _level3Button;
-    [SerializeField] private Player _player;
     [SerializeField] private Score _score;
 
+    private Player _player;
     private CanvasGroup _gameOverGroup;
 
     private void OnEnable()
     {
         _player.Died += OnDied;
-
         _level1Button.onClick.AddListener(OnRestartLevelBeach);
         _level2Button.onClick.AddListener(OnRestartLevelDesert);
         _level3Button.onClick.AddListener(OnRestartLevelWinter);
@@ -38,16 +36,20 @@ public class GameOverScreen : MonoBehaviour
 
     private void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         _gameOverGroup = GetComponent<CanvasGroup>();
         _gameOverGroup.alpha = 0;
         _gameOverGroup.blocksRaycasts = false;
+        InteractableButton(false);
     }
 
     private void OnDied()
     {
+        Debug.Log("פûגפûגפû");
         _gameOverGroup.alpha = 1;
         _gameOverGroup.blocksRaycasts = true;
         Time.timeScale = 0;
+        InteractableButton(true);
         _score.ChangePlaying(false);
     }
 
