@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class GameOverScreen : MonoBehaviour
@@ -12,9 +13,13 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private Button _level2Button;
     [SerializeField] private Button _level3Button;
     [SerializeField] private Score _score;
+    [SerializeField] private TMP_Text _scoreUI;
+    [SerializeField] private TMP_Text _coinUI;
 
     private Player _player;
     private CanvasGroup _gameOverGroup;
+    private int _scores;
+    private int _coins;
 
     private void OnEnable()
     {
@@ -45,12 +50,12 @@ public class GameOverScreen : MonoBehaviour
 
     private void OnDied()
     {
-        Debug.Log("פûגפûגפû");
         _gameOverGroup.alpha = 1;
         _gameOverGroup.blocksRaycasts = true;
         Time.timeScale = 0;
         InteractableButton(true);
-        _score.ChangePlaying(false);
+        GetStatistics();
+        _score.ChangePlaying(false); 
     }
 
     private void OnRestartLevelBeach()
@@ -85,6 +90,14 @@ public class GameOverScreen : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(number);
         _score.ChangePlaying(true);
+    }
+
+    private void GetStatistics()
+    {
+        _scores = PlayerPrefs.GetInt("score");
+        _coins = PlayerPrefs.GetInt("coin");
+        _scoreUI.text = _scores.ToString();
+        _coinUI.text = _coins.ToString();
     }
 
     private void OnMenuButtonClick()

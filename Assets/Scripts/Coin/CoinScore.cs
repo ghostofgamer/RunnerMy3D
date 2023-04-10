@@ -27,7 +27,6 @@ public class CoinScore : MonoBehaviour
 
     private void OnCoinChanged(int score)
     {
-        Debug.Log("тут?");
         _coin.text = score.ToString();
         _coinSound.AudioCollect();
     }

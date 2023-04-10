@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
 
     public int Coin => _coin;
 
-
     private void Start()
     {
         ResetPlayer();
@@ -22,6 +21,7 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
+        PlayerPrefs.SetInt("score", _score);
         Died?.Invoke();
     }
 
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     public void ResetPlayer()
     {
         _score = 0;
+        _coin = 0;
         ScoreChanged?.Invoke(_score);
         CoinsScoreChanged?.Invoke(_coin);
     }
