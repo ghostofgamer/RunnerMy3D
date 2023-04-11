@@ -32,6 +32,7 @@ public class GameScreenMenu : MonoBehaviour
     private int _winterLevel;
     private int _skinBigMan;
     private int _skinNinja;
+    private int _bestScore;
 
     public Button Level2 => _level2Button;
     public Button Level3 => _level3Button;
@@ -41,6 +42,7 @@ public class GameScreenMenu : MonoBehaviour
 
     private int _scores;
     [SerializeField] private TMP_Text _scoreUI;
+
     private void OnEnable()
     {
         _settingsButton.onClick.AddListener(OnSettingsButtonClick);
@@ -63,27 +65,18 @@ public class GameScreenMenu : MonoBehaviour
     {
         _gameMenuGroup = GetComponent<CanvasGroup>();
         _gameMenuGroup.alpha = 1;
-        //_gameMenuGroup.alpha = 0;
         InteractableButton(true);
-        //InteractableButton(false);
-        //if (_desertLevel == 0)
-        //{
-        //    _level2Button.interactable = false;
-        //}
-        //if (_winterLevel == 0)
-        //{
-        //    _level3Button.interactable = false;
-        //}
         Time.timeScale = 1;
-        //Time.timeScale = 0;
-        //_gameMenuGroup.blocksRaycasts = false;
         _score.ChangePlaying(false);
-
-
-        //int totalScore = PlayerPrefs.GetInt("score");
+        _bestScore = PlayerPrefs.GetInt("bestScore");
         _scores = PlayerPrefs.GetInt("score");
-        //PlayerPrefs.SetInt("score", _scores);
-        _scoreUI.text = _scores.ToString();
+
+        if (_scores > _bestScore)
+        {
+            _bestScore = _scores;
+            PlayerPrefs.SetInt("bestScore", _bestScore);
+        }
+        _scoreUI.text = _bestScore.ToString();
     }
 
     private void Update()

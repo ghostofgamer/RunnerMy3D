@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527af3b4443ebab44a3c9478f78dc300, type: 3}
   m_Name: ShopMenu 2
   m_EditorClassIdentifier: 
-  title: "\u043F\u0443\u0441\u0442\u044B\u043D\u044F"
-  description: "\u0436\u0430\u0440\u043A\u043E"
+  title: "\u041F\u0443\u0441\u0442\u044B\u043D\u044F"
+  description: "\u0421\u0443\u0445\u043E"
   baseCost: 1
   sprite: {fileID: 21300000, guid: 6bbc8f14afe98f042b735dba2421eab8, type: 3}

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 74adf8b5d029f0e42b54ec2ad0c1a509
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Alumni Sans Collegiate One
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c364f79bde9edec40b8d5570040bc140, type: 3}
+  - {fileID: 12800000, guid: 4a77df57a8961f443ad5ea134585cfa6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,6 @@ public class Shop : MonoBehaviour
     public ShopItemSO[] shopItemSO;
     public GameObject[] shopPanelsGo;
     public ShopTemplate[] shopPanels;
-    public Button returnButton;
     public Button[] myPurchaseBtns;
     public Button menu;
     public Player player;
@@ -23,7 +22,6 @@ public class Shop : MonoBehaviour
     [SerializeField] private Button _buyWinterButton;
     [SerializeField] private Button _buyBigManButton;
     [SerializeField] private Button _buyNinjaButton;
-    [SerializeField] private Button[] _buysButton;
 
     private int _desertAcsess;
     private int _winterAcsess;
@@ -43,7 +41,6 @@ public class Shop : MonoBehaviour
 
     private void OnEnable()
     {
-        returnButton.onClick.AddListener(OnReturnButtonClick);
         menu.onClick.AddListener(ReturnToMenu);
         _buyDesertButton.onClick.AddListener(BuyDesertLevel);
         _buyWinterButton.onClick.AddListener(BuyWinterLevel);
@@ -53,7 +50,6 @@ public class Shop : MonoBehaviour
 
     private void OnDisable()
     {
-        returnButton.onClick.RemoveListener(OnReturnButtonClick);
         menu.onClick.RemoveListener(ReturnToMenu);
         _buyDesertButton.onClick.RemoveListener(BuyDesertLevel);
         _buyWinterButton.onClick.RemoveListener(BuyWinterLevel);
@@ -136,27 +132,6 @@ public class Shop : MonoBehaviour
                 myPurchaseBtns[i].interactable = false;
             }
         }
-    }
-
-    //public void PurchaseItem(int BtnNo)
-    //{
-    //    if (coins >= shopItemSO[BtnNo].baseCost)
-    //    {
-    //        coins = coins - shopItemSO[BtnNo].baseCost;
-    //        PlayerPrefs.SetInt("coins", coins);
-    //        coinUI.text = coins.ToString();
-    //        CheckPurchaseable();
-    //        myPurchaseBtns[BtnNo].enabled = false;
-    //        myPurchaseBtns[BtnNo].GetComponentInChildren<TMP_Text>().text = "Куплено";
-    //        myPurchaseBtns[BtnNo].image.color = Color.blue;
-    //    }
-    //}
-
-    private void OnReturnButtonClick()
-    {
-        _shopCanvas.alpha = 0;
-        Time.timeScale = 1;
-        _shopCanvas.blocksRaycasts = false;
     }
 
     public void OpenShopScreen()
