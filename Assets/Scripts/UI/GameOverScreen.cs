@@ -9,9 +9,6 @@ using TMPro;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private Button _menuButton;
-    [SerializeField] private Button _level1Button;
-    [SerializeField] private Button _level2Button;
-    [SerializeField] private Button _level3Button;
     [SerializeField] private Score _score;
     [SerializeField] private TMP_Text _scoreUI;
     [SerializeField] private TMP_Text _coinUI;
@@ -24,18 +21,12 @@ public class GameOverScreen : MonoBehaviour
     private void OnEnable()
     {
         _player.Died += OnDied;
-        _level1Button.onClick.AddListener(OnRestartLevelBeach);
-        _level2Button.onClick.AddListener(OnRestartLevelDesert);
-        _level3Button.onClick.AddListener(OnRestartLevelWinter);
         _menuButton.onClick.AddListener(OnMenuButtonClick);
     }
 
     private void OnDisable()
     {
         _player.Died += OnDied;
-        _level1Button.onClick.RemoveListener(OnRestartLevelBeach);
-        _level2Button.onClick.RemoveListener(OnRestartLevelDesert);
-        _level3Button.onClick.RemoveListener(OnRestartLevelWinter);
         _menuButton.onClick.RemoveListener(OnMenuButtonClick);
     }
 
@@ -58,38 +49,9 @@ public class GameOverScreen : MonoBehaviour
         _score.ChangePlaying(false); 
     }
 
-    private void OnRestartLevelBeach()
-    {
-        InteractableButton(false);
-        ChangeLevel(1);
-    }
-
-    private void OnRestartLevelDesert()
-    {
-        InteractableButton(false);
-        ChangeLevel(2);
-    }
-
-    private void OnRestartLevelWinter()
-    {
-        InteractableButton(false);
-        ChangeLevel(3);
-    }
-
     private void InteractableButton(bool flag)
     {
         _menuButton.interactable = flag;
-        _level1Button.interactable= flag;
-        _level2Button.interactable= flag;
-        _level3Button.interactable= flag;
-    }
-
-    private void ChangeLevel(int number)
-    {
-        InteractableButton(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(number);
-        _score.ChangePlaying(true);
     }
 
     private void GetStatistics()

@@ -29,17 +29,18 @@ public class SettingsScreen : MonoBehaviour
 
     private void Start()
     {
+        _slider.value = PlayerPrefs.GetFloat("volume");
         _settingsGroup = GetComponent<CanvasGroup>();
         _settingsGroup.alpha = 0;
         _settingsGroup.blocksRaycasts = false;
-        _offMusicButton.interactable = false;
-        _acceptButton.interactable = false;
+        InteractableButtons(false);
     }
 
     private void Update()
     {
         _musicVolume = _slider.value;
         _audioSource.volume = _musicVolume;
+        PlayerPrefs.SetFloat("volume", _slider.value);
     }
 
     private void OnOffMusicButtonClick()
@@ -58,8 +59,12 @@ public class SettingsScreen : MonoBehaviour
     {
         _settingsGroup.alpha = 1;
         _settingsGroup.blocksRaycasts = true;
-        //Time.timeScale = 0;
-        _offMusicButton.interactable = true;
-        _acceptButton.interactable = true;
+        InteractableButtons(true);
+    }
+
+    private void InteractableButtons(bool flag)
+    {
+        _offMusicButton.interactable = flag;
+        _acceptButton.interactable = flag;
     }
 }

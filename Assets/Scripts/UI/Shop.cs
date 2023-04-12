@@ -7,29 +7,28 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private GameScreenMenu _gameScreenMenu;
-
-    public int coins;
-    public TMP_Text coinUI;
-    public ShopItemSO[] shopItemSO;
-    public GameObject[] shopPanelsGo;
-    public ShopTemplate[] shopPanels;
-    public Button[] myPurchaseBtns;
-    public Button menu;
-    public Player player;
-
-
+    [SerializeField] private TMP_Text coinUI;
+    [SerializeField] private ShopItemSO[] shopItemSO;
+    [SerializeField] private GameObject[] shopPanelsGo;
+    [SerializeField] private ShopTemplate[] shopPanels;
+    [SerializeField] private Button[] myPurchaseBtns;
+    [SerializeField] private Button menu;
+    [SerializeField] private Player player;
     [SerializeField] private Button _buyDesertButton;
     [SerializeField] private Button _buyWinterButton;
     [SerializeField] private Button _buyBigManButton;
     [SerializeField] private Button _buyNinjaButton;
+    [SerializeField] private Button _winterBlock;
+    [SerializeField] private Button _desertBlock;
+    [SerializeField] private Button _bigManBlock;
+    [SerializeField] private Button _ninjaBlock;
 
+    private int coins;
     private int _desertAcsess;
     private int _winterAcsess;
     private int _bigManAcsess;
     private int _ninjaAcsess;
-
     private CanvasGroup _shopCanvas;
-
 
     private void Awake()
     {
@@ -76,30 +75,25 @@ public class Shop : MonoBehaviour
         if (_desertAcsess != 0)
         {
             myPurchaseBtns[1].enabled = false;
-            LevelBuiyng(_buyDesertButton);
+            BuyBlock(_buyDesertButton);
         }
         if (_winterAcsess != 0)
         {
-            LevelBuiyng(_buyWinterButton);
             myPurchaseBtns[0].enabled = false;
+            BuyBlock(_buyWinterButton);
         }
         if (_bigManAcsess != 0)
         {
-            LevelBuiyng(_buyBigManButton);
             myPurchaseBtns[3].enabled = false;
+            BuyBlock(_buyBigManButton);
         }
         if (_ninjaAcsess != 0)
         {
-            LevelBuiyng(_buyNinjaButton);
             myPurchaseBtns[4].enabled = false;
+            BuyBlock(_buyNinjaButton);
         }
         LoadPanels();
         CheckPurchaseable();
-    }
-
-    private void Update()
-    {
-        //AddCoins();
     }
 
     public void AddCoins()
@@ -112,10 +106,10 @@ public class Shop : MonoBehaviour
     {
         for (int i = 0; i < shopItemSO.Length; i++)
         {
-            shopPanels[i].titleText.text = shopItemSO[i].title;
-            shopPanels[i].descriptionTxt.text = shopItemSO[i].description;
-            shopPanels[i].costTxt.text = shopItemSO[i].baseCost.ToString();
-            shopPanels[i]._imageItem.sprite = shopItemSO[i].sprite;
+            shopPanels[i].TitleText.text = shopItemSO[i].Title;
+            shopPanels[i].DescriptionTxt.text = shopItemSO[i].Description;
+            shopPanels[i].CostTxt.text = shopItemSO[i].BaseCost.ToString();
+            shopPanels[i].ImageItem.sprite = shopItemSO[i].Sprite;
         }
     }
 
@@ -123,7 +117,7 @@ public class Shop : MonoBehaviour
     {
         for (int i = 0; i < shopItemSO.Length; i++)
         {
-            if (coins >= shopItemSO[i].baseCost)
+            if (coins >= shopItemSO[i].BaseCost)
             {
                 myPurchaseBtns[i].interactable = true;
             }
@@ -149,88 +143,56 @@ public class Shop : MonoBehaviour
         _gameScreenMenu.OpenScreen();
     }
 
-    //private void BuyDesertLevel(int number)
-    //{
-    //    if (coins >= shopItemSO[number].baseCost)
-    //    {
-    //        coins = coins - shopItemSO[number].baseCost;
-    //        PlayerPrefs.SetInt("coins", coins);
-    //        coinUI.text = coins.ToString();
-    //        _buysButton[number].image.color = Color.blue;
-    //    }
-    //}
-
     private void BuyWinterLevel()
     {
-        if (coins >= shopItemSO[0].baseCost)
+        if (coins >= shopItemSO[0].BaseCost)
         {
-            coins = coins - shopItemSO[0].baseCost;
+            coins = coins - shopItemSO[0].BaseCost;
             PlayerPrefs.SetInt("coins", coins);
             coinUI.text = coins.ToString();
-            //_buyWinterButton.GetComponentInChildren<TMP_Text>().text = "Куплено";
-            //_buyWinterButton.interactable = false;
-            //_buyWinterButton.image.color = Color.blue;
-            ChangeInteractableAndColor(_buyWinterButton);
+            BuyBlock(_buyWinterButton);
             PlayerPrefs.SetInt("winterLevel", 1);
         }
     }
 
     private void BuyDesertLevel()
     {
-        if (coins >= shopItemSO[1].baseCost)
+        if (coins >= shopItemSO[1].BaseCost)
         {
-            coins = coins - shopItemSO[1].baseCost;
+            coins = coins - shopItemSO[1].BaseCost;
             PlayerPrefs.SetInt("coins", coins);
             coinUI.text = coins.ToString();
-            //_buyDesertButton.GetComponentInChildren<TMP_Text>().text = "Куплено";
-            //_buyDesertButton.interactable = false;
-            //_buyDesertButton.image.color = Color.blue;
-            ChangeInteractableAndColor(_buyDesertButton);
+            BuyBlock(_buyDesertButton);
             PlayerPrefs.SetInt("desertLevel", 1);
         }
     }
 
     private void OnBuyBigMan()
     {
-        if (coins >= shopItemSO[3].baseCost)
+        if (coins >= shopItemSO[3].BaseCost)
         {
-            coins = coins - shopItemSO[3].baseCost;
+            coins = coins - shopItemSO[3].BaseCost;
             PlayerPrefs.SetInt("coins", coins);
             coinUI.text = coins.ToString();
-            //_buyBigManButton.GetComponentInChildren<TMP_Text>().text = "Куплено";
-            //_buyBigManButton.interactable = false;
-            //_buyBigManButton.image.color = Color.blue;
-            ChangeInteractableAndColor(_buyBigManButton);
+            BuyBlock(_buyBigManButton);
             PlayerPrefs.SetInt("bigMan", 1);
         }
     }
 
     private void OnBuyNinja()
     {
-        if (coins >= shopItemSO[4].baseCost)
+        if (coins >= shopItemSO[4].BaseCost)
         {
-            coins = coins - shopItemSO[4].baseCost;
+            coins = coins - shopItemSO[4].BaseCost;
             PlayerPrefs.SetInt("coins", coins);
             coinUI.text = coins.ToString();
-            //_buyNinjaButton.GetComponentInChildren<TMP_Text>().text = "Куплено";
-            //_buyNinjaButton.interactable = false;
-            //_buyNinjaButton.image.color = Color.blue;
-            ChangeInteractableAndColor(_buyNinjaButton);
+            BuyBlock(_buyNinjaButton);
             PlayerPrefs.SetInt("ninja", 1);
         }
     }
 
-    private void LevelBuiyng(Button button)
+    private void BuyBlock(Button button)
     {
-        button.GetComponentInChildren<TMP_Text>().text = "Куплено";
-        button.interactable = false;
-        button.image.color = Color.blue;
-    }
-
-    private void ChangeInteractableAndColor(Button button)
-    {
-        button.GetComponentInChildren<TMP_Text>().text = "Куплено";
-        button.interactable = false;
-        button.image.color = Color.blue;
+        button.gameObject.SetActive(false);
     }
 }
