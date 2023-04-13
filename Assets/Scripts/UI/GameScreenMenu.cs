@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using IJunior.TypedScenes;
-using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class GameScreenMenu : MonoBehaviour
@@ -38,11 +37,14 @@ public class GameScreenMenu : MonoBehaviour
     public Button Level3 => _level3Button;
     public Button[] LevelButtons => _levelButtons;
 
+<<<<<<< HEAD
 
 
     private int _scores;
     [SerializeField] private TMP_Text _scoreUI;
 
+=======
+>>>>>>> parent of e6e2c8a9 (add Score statistic)
     private void OnEnable()
     {
         _settingsButton.onClick.AddListener(OnSettingsButtonClick);
@@ -68,6 +70,7 @@ public class GameScreenMenu : MonoBehaviour
         InteractableButton(true);
         Time.timeScale = 1;
         _score.ChangePlaying(false);
+<<<<<<< HEAD
         _bestScore = PlayerPrefs.GetInt("bestScore");
         _scores = PlayerPrefs.GetInt("score");
 
@@ -77,6 +80,8 @@ public class GameScreenMenu : MonoBehaviour
             PlayerPrefs.SetInt("bestScore", _bestScore);
         }
         _scoreUI.text = _bestScore.ToString();
+=======
+>>>>>>> parent of e6e2c8a9 (add Score statistic)
     }
 
     private void Update()

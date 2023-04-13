@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private GameScreenMenu _gameScreenMenu;
+<<<<<<< HEAD
     [SerializeField] private TMP_Text coinUI;
     [SerializeField] private ShopItemSO[] shopItemSO;
     [SerializeField] private GameObject[] shopPanelsGo;
@@ -14,6 +15,22 @@ public class Shop : MonoBehaviour
     [SerializeField] private Button[] myPurchaseBtns;
     [SerializeField] private Button menu;
     [SerializeField] private Player player;
+=======
+
+    public int coins;
+    public TMP_Text coinUI;
+    public ShopItemSO[] shopItemSO;
+    public GameObject[] shopPanelsGo;
+    public ShopTemplate[] shopPanels;
+    public Button returnButton;
+    public Button[] myPurchaseBtns;
+    public Button menu;
+    public Button BigManButton;
+    public Button NinjaButton;
+    public Player player;
+
+
+>>>>>>> parent of e6e2c8a9 (add Score statistic)
     [SerializeField] private Button _buyDesertButton;
     [SerializeField] private Button _buyWinterButton;
     [SerializeField] private Button _buyBigManButton;
@@ -45,6 +62,7 @@ public class Shop : MonoBehaviour
         _buyWinterButton.onClick.AddListener(BuyWinterLevel);
         _buyBigManButton.onClick.AddListener(OnBuyBigMan);
         _buyNinjaButton.onClick.AddListener(OnBuyNinja);
+        _buyNinjaButton.onClick.AddListener(BuyDesertLevel);
     }
 
     private void OnDisable()
