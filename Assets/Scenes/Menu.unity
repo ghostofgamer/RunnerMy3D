@@ -1018,6 +1018,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &191749457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1216,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1527055450098318974, guid: adef00e2be323654ca5fa825a2cc3c72, type: 3}
   m_PrefabInstance: {fileID: 223974226}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of e6e2c8a9 (add Score statistic)
 =======
 >>>>>>> parent of e6e2c8a9 (add Score statistic)
 =======
