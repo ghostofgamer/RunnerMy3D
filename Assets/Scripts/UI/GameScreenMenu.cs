@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using IJunior.TypedScenes;
-using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class GameScreenMenu : MonoBehaviour
@@ -37,10 +36,6 @@ public class GameScreenMenu : MonoBehaviour
     public Button Level3 => _level3Button;
     public Button[] LevelButtons => _levelButtons;
 
-
-
-    private int _scores;
-    [SerializeField] private TMP_Text _scoreUI;
     private void OnEnable()
     {
         _settingsButton.onClick.AddListener(OnSettingsButtonClick);
@@ -78,12 +73,6 @@ public class GameScreenMenu : MonoBehaviour
         //Time.timeScale = 0;
         //_gameMenuGroup.blocksRaycasts = false;
         _score.ChangePlaying(false);
-
-
-        //int totalScore = PlayerPrefs.GetInt("score");
-        _scores = PlayerPrefs.GetInt("score");
-        //PlayerPrefs.SetInt("score", _scores);
-        _scoreUI.text = _scores.ToString();
     }
 
     private void Update()

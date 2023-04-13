@@ -16,6 +16,8 @@ public class Shop : MonoBehaviour
     public Button returnButton;
     public Button[] myPurchaseBtns;
     public Button menu;
+    public Button BigManButton;
+    public Button NinjaButton;
     public Player player;
 
 
@@ -49,6 +51,7 @@ public class Shop : MonoBehaviour
         _buyWinterButton.onClick.AddListener(BuyWinterLevel);
         _buyBigManButton.onClick.AddListener(OnBuyBigMan);
         _buyNinjaButton.onClick.AddListener(OnBuyNinja);
+        _buyNinjaButton.onClick.AddListener(BuyDesertLevel);
     }
 
     private void OnDisable()

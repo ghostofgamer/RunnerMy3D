@@ -601,7 +601,11 @@ PlayerSettings:
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 16
+<<<<<<< HEAD
   webGLExceptionSupport: 0
+=======
+  webGLExceptionSupport: 1
+>>>>>>> parent of e6e2c8a9 (add Score statistic)
   webGLNameFilesAsHashes: 1
   webGLDataCaching: 0
   webGLDebugSymbols: 0
