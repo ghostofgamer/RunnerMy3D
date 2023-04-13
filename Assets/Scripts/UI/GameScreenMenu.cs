@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using IJunior.TypedScenes;
 using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -88,13 +87,11 @@ public class GameScreenMenu : MonoBehaviour
 
         if (_desertLevel != 0)
         {
-            //_level2Button.interactable = true;
             _blockLvlDesert.SetActive(false);
         }
 
         if (_winterLevel != 0)
         {
-            //_level3Button.interactable = true;
             _blockLvlWinter.SetActive(false);
         }
 
